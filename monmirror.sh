@@ -1,8 +1,9 @@
-if /opt/homebrew/bin/mirror -q | grep -q 'on'; then 
-  /opt/homebrew/bin/mirror -off
+mon=$(which mirror)
+if $mon -q | grep -q 'on'; then 
+  $mon -off
   exit
 fi
-if /opt/homebrew/bin/mirror -q | grep -q 'off'; then
-  /opt/homebrew/bin/mirror -l 1 0
+if $mon -q | grep -q 'off'; then
+  $mon -l 1 0
   exit
 fi
