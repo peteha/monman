@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 if mirror -q | grep -q 'on'; then 
   mirror -off
   exit
